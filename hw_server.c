@@ -5,14 +5,19 @@
    Hello world RPC server -- it just returns the string.
 */
 
-char **hw_1_svc(void *a, struct svc_req *req) {
-	static char msg[256];
-	static char *p;
+AB *hw_1_svc(AB *ab, struct svc_req *req) {
+	struct AB *p;
 
 	printf("getting ready to return value\n");
-	strcpy(msg, "Hello world");
-	p = msg;
-	printf("Returning...\n");
 
-	return(&p);
+	int tmp = 0;
+	tmp = ab->a;
+	ab->a = ab->b;
+	ab->b = tmp;
+
+	printf("a=%d\nb=%d\n",ab->a,ab->b);
+	p = ab;
+	printf("Returning\n");
+
+	return(p);
 }

@@ -9,7 +9,8 @@
 main (int argc, char *argv[]) {
 
 	CLIENT *cl;
-	char **p;
+	struct AB ab;
+	struct AB *p;
 	
 	if (argc != 2) {
 		printf("Usage: client hostname\n");
@@ -22,6 +23,8 @@ main (int argc, char *argv[]) {
 		exit(1);
 	}
 
+	ab.a = 10;
+	ab.b = 20;
 	printf("Getting ready to call hello world\n");
 	p = hw_1(NULL, cl);
 
@@ -31,7 +34,7 @@ main (int argc, char *argv[]) {
 		exit(1);
 	}
 
-	printf("Returned string=%s\n", *p);
+	printf("Returned a=%d\nb=%d",p->a,p->b);
 
 	return 0;
 }
