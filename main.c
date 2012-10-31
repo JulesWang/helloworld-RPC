@@ -34,7 +34,7 @@ main (int argc, char *argv[]) {
 		exit(1);
 	}
 
-	printf("Returned a=%d\nb=%d",p->a,p->b);
+	printf("Returned a=%d, b=%d\n",p->a,p->b);
 
 	return 0;
 }
