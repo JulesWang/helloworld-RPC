@@ -26,7 +26,7 @@ main (int argc, char *argv[]) {
 	ab.a = 10;
 	ab.b = 20;
 	printf("Getting ready to call hello world\n");
-	p = hw_1(NULL, cl);
+	p = hw_1(&ab, cl);
 
 	printf("Back from hello world\n");
 	if (p == NULL) {
