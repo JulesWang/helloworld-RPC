@@ -22,7 +22,7 @@ CMD
 
 \> sudo ./server
 
-\> client localhost
+\> ./client localhost
 
 Output
 ---------------
